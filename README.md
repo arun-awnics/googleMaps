@@ -14,6 +14,3 @@ Use Cases:
 2.	User can search current weather details for more than one location.
 3.	Map drops a marker once the user inputs the location. User can click on the marker to show an info window where current weather details of the location is displayed.
 4.	User can also close the info window by clicking the “x” mark on the corner of the info window. User can click on the marker to show the info window again.
-
-
-//The weather info is not yet integrated. 
