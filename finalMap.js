@@ -66,8 +66,7 @@ var updateOpenWeatherData = function (place, infowindow, name, address) {
      if (data.readyState === 4) {
        if (data.status === 200) {
          var weather_data = JSON.parse(data.response);
-         var disp_data = "<strong>Location: </strong>" + name + "<br/>" +
-           "<strong>Address: </strong>" + address + "<br/>" +
+         var disp_data = "<strong>" + name + "</strong><br/>" + address + "<br/>" +
            "<strong>Weather: </strong>" + weather_data.weather[0].main + "<br/>" +
            "<strong>Temperature: </strong>" + weather_data.main.temp + "&deg;C<br/>" +
            "<strong>Min temperature: </strong>" + weather_data.main.temp_min + "&deg;C<br/>" +
@@ -75,7 +74,7 @@ var updateOpenWeatherData = function (place, infowindow, name, address) {
            "<strong>Humidity: </strong>" + weather_data.main.humidity + "%<br/>";
 
          //Set infowindow data
-         infowindow.setContent('<div style= "text-align:center; ">' + disp_data + '</div>');
+         infowindow.setContent('<div style= "text-align:left; ">' + disp_data + '</div>');
 
        } else {
          console.error(data.statusText);
